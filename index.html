@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="logo"> <img src="images/TestLogo.png" alt="testlogo" /> </a>
+        <div class="menu">
+          <ul>
+            <li><img src="images/home_FILL0_wght300_GRAD0_opsz24.png" alt="home" /> <a href="">overview</a></li>
+            <li class="active">
+              <img src="images/group_FILL0_wght300_GRAD0_opsz24.png" alt="patients" /> <a href="">Patients</a>
+            </li>
+            <li><img src="images/calendar_today_FILL0_wght300_GRAD0_opsz24.png" alt="schedula" /> <a href="">Schedula</a></li>
+            <li><img src="images/chat_bubble_FILL0_wght300_GRAD0_opsz24.png" alt="message" /> <a href="">Message</a></li>
+            <li><img src="images/credit_card_FILL0_wght300_GRAD0_opsz24.png" alt="credit" /> <a href="transaction">Transaction</a></li>
+          </ul>
+        </div>
+        <div class="dr">
+          <img src="images/senior-woman-doctor-and-portrait-smile-for-health-2023-11-27-05-18-16-utc.png" alt="doctor" />
+          <span>
+            <h5>Dr. Jose simmons</h5>
+            <h6>general practitioner</h6>
+          </span>
+          <div class="nav_control">
+            <img class="setting" src="images/settings_FILL0_wght300_GRAD0_opsz24.png" alt="setting" />
+            <img class="more" src="images/more_vert_FILL0_wght300_GRAD0_opsz24.png" alt="more" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <div class="patients">
+          <span>
+            <h4>patients</h4>
+            <img src="images/search_FILL0_wght300_GRAD0_opsz24.png" alt="search" />
+          </span>
+          <div class="patients_cards"></div>
+        </div>
+      </div>
+
+      <div class="diagnos">
+        <div class="diagnosis_history">
+          <div class="chart_history">
+            <h3>diagnosis History</h3>
+            <div class="chart">
+              <div class="myChart">
+                <div class="chart_head">
+                  <h2>Blood Pressure</h2>
+                  <div class="dropdown">
+                    <button class="dropbtn">Last 6 months <i class="fa-solid fa-angle-down"></i></button>
+                    <div class="dropdown-content">
+                      <a href="#" onclick="updateChart(6)">Last 6 months</a>
+                      <a href="#" onclick="updateChart(12)">Last 12 months</a>
+                      <a href="#" onclick="updateChart(24)">Last 24 months</a>
+                    </div>
+                  </div>
+                </div>
+                <canvas id="myChart"></canvas>
+              </div>
+              <div class="systolic_diastolic"></div>
+            </div>
+          </div>
+          <div class="carts"></div>
+        </div>
+        <div class="diagnostic_list">
+          <h3>diagnosis History</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Problem/Diagnosis</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="table-container">
+            <table class="table"></table>
+          </div>
+        </div>
+      </div>
+      <div class="patient_container">
+        <div class="patient_details">
+          <div class="image"></div>
+          <div class="list"></div>
+          <div class="information_button">
+            <button>show all information</button>
+          </div>
+        </div>
+        <div class="lab_result">
+          <h3>lab result</h3>
+          <div class="lab_div"></div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/fetchData.js"></script>
+    <script src="js/app.js"></script>
+
+    <script></script>
+  </body>
+</html>
